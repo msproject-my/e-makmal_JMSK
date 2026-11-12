@@ -51,6 +51,12 @@
         /* Smooth scrolling & Custom Scrollbar */
         html {
             scroll-behavior: smooth;
+            font-size: 17.5px; /* Membesarkan skala keseluruhan font secara seimbang */
+        }
+        @media (min-width: 1280px) {
+            html {
+                font-size: 18px;
+            }
         }
         ::-webkit-scrollbar {
             width: 8px;
@@ -106,14 +112,9 @@
 </head>
 <body class="bg-[#FAF8FD] text-slate-700 min-h-screen flex flex-col antialiased selection:bg-purple-200 selection:text-purple-900">
 
-    <!-- Bar Tajuk Kecil Paling Atas (Persis Tangkapan Skrin Google Sites) -->
-    <div class="px-6 sm:px-10 pt-4 pb-2 text-xs sm:text-sm font-normal text-slate-500 select-none">
-        Sistem Pengurusan & Tempahan Mak...
-    </div>
-
     <!-- Header & Navigation Bar Utama -->
     <header class="px-4 sm:px-8 py-3 bg-transparent">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div class="max-w-[96%] 2xl:max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
             
             <!-- Logo & Brand JMSK PPD -->
             <div class="flex items-center gap-3">
@@ -153,7 +154,7 @@
     </header>
 
     <!-- Kontena Kandungan Utama -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-4 flex-1 w-full space-y-6">
+    <main class="max-w-[96%] 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 py-4 flex-1 w-full space-y-6">
 
         <!-- ========================================================================= -->
         <!-- TAB 1: UTAMA (DASHBOARD) - 100% PERSIS IMEJ SAMPEL -->
@@ -172,7 +173,7 @@
                             Portal e-Makmal <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">JMSK</span>
                         </h1>
                         <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-                            Jabatan Matematik, Sains dan Komputer • Politeknik Port Dickson. Platform berpusat bagi penjadualan makmal MKEJ 1 & MKEJ 2, peminjaman perkakasan serta aduan fasiliti.
+                            Jabatan Matematik, Sains dan Komputer • Politeknik Port Dickson. Platform berpusat bagi tempahan makmal MKEJ 1 & MKEJ 2, peminjaman perkakasan serta aduan fasiliti.
                         </p>
                     </div>
 
@@ -213,7 +214,7 @@
 
                         <button onclick="openContactModal()" class="w-full mt-5 py-3 px-4 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-purple-500/20 transition flex items-center justify-center gap-2 group">
                             <i class="fa-solid fa-paper-plane text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                            <span>Hubungi Pegawai Makmal</span>
+                            <span>Hubungi Pembantu Makmal</span>
                         </button>
                     </div>
                 </div>
@@ -226,7 +227,7 @@
                                 <i class="fa-solid fa-door-open"></i>
                             </div>
                             <div>
-                                <h3 class="font-extrabold text-slate-800 text-sm">Ruang Makmal Kejuruteraan</h3>
+                                <h3 class="font-extrabold text-slate-800 text-sm">Makmal Kejuruteraan</h3>
                                 <p class="text-[11px] text-slate-400 font-medium">MKEJ 1 & MKEJ 2 • Gambaran Sudut Makmal</p>
                             </div>
                         </div>
@@ -243,7 +244,7 @@
                             <img id="lab-img-0" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="MKEJ 1 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 1 • Bahagian Depan (Papan Putih & Meja Pensyarah)
+                                    MKEJ 1
                                 </p>
                             </div>
                         </div>
@@ -253,7 +254,7 @@
                             <img id="lab-img-1" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="MKEJ 1 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 1 • Bahagian Belakang (SAFETY FIRST & Papan Kenyataan)
+                                    MKEJ 1
                                 </p>
                             </div>
                         </div>
@@ -263,7 +264,7 @@
                             <img id="lab-img-2" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="MKEJ 2 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 2 • Bahagian Depan (Papan Putih & Meja Pensyarah)
+                                    MKEJ 2
                                 </p>
                             </div>
                         </div>
@@ -273,7 +274,7 @@
                             <img id="lab-img-3" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80" alt="MKEJ 2 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 2 • Bahagian Belakang (Sudut Meja Amali)
+                                    MKEJ 2
                                 </p>
                             </div>
                         </div>
