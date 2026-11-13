@@ -198,6 +198,8 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
             <!-- Grid Kandungan Dashboard (Susunan 2 Bahagian Seimbang & Sejajar) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
                 
@@ -491,7 +493,6 @@
                     </div>
                 </div>
 
-                <!-- Paparan Langsung Google Sheets Berserta Tab Sebenar (Fixed Center View Tanpa Skrol) -->
                 <!-- Paparan Langsung Google Sheets Berserta Tab Sebenar (Native Crisp 100% Width) -->
                 <div id="user-gsheet-wrapper" class="rounded-3xl overflow-hidden border border-purple-100 bg-white shadow-xs w-full">
                     <iframe id="user-gsheet-timetable-iframe"
@@ -656,7 +657,6 @@
                     </div>
                 </div>
 
-                <!-- Paparan Excel Admin (Fixed Center View Tanpa Skrol) -->
                 <!-- Paparan Excel Admin (Native Crisp 100% Width) -->
                 <div id="admin-gsheet-wrapper" class="rounded-2xl overflow-hidden border border-slate-200 bg-white w-full">
                     <iframe id="admin-gsheet-iframe" 
@@ -840,6 +840,85 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- 4. Kod QR Borang Rasmi Makmal (Bahagian Bawah Sekali) -->
+            <div class="bg-white/95 rounded-3xl p-6 border border-purple-200 shadow-sm space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-qrcode"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-black text-slate-800 text-base">Kod QR Borang Rasmi Makmal JMSK</h3>
+                            <p class="text-xs text-slate-400">Muat turun kod QR lengkap berserta tajuk borang di bahagian atas untuk paparan dan cetakan di makmal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    
+                    <!-- QR 1: Penggunaan Alatan Latihan Amali -->
+                    <div class="rounded-3xl p-5 border border-emerald-100 bg-emerald-50/40 flex flex-col items-center justify-between text-center space-y-4">
+                        <div class="space-y-1">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 font-extrabold text-[10px] uppercase">Borang 1</span>
+                            <h4 class="font-black text-slate-800 text-sm leading-snug">Borang Penggunaan Alatan Latihan Amali</h4>
+                        </div>
+                        <div class="p-3.5 bg-white rounded-2xl border border-emerald-100 shadow-xs">
+                            <img id="qr-img-1"
+                                 src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfSp_EkKeBFOwno98KU9sKd-2RHCsGPSMYJsYQd5m75Yv4upg%2Fviewform"
+                                 crossorigin="anonymous"
+                                 alt="QR Borang Penggunaan Alatan Latihan Amali"
+                                 class="w-44 h-44 object-contain mx-auto">
+                        </div>
+                        <button onclick="downloadQrWithTitle('https://docs.google.com/forms/d/e/1FAIpQLSfSp_EkKeBFOwno98KU9sKd-2RHCsGPSMYJsYQd5m75Yv4upg/viewform', 'BORANG PENGGUNAAN ALATAN LATIHAN AMALI', 'QR_Penggunaan_Alatan_Amali.png', '#059669')"
+                                class="w-full py-2.5 px-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs shadow-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Muat Turun QR</span>
+                        </button>
+                    </div>
+
+                    <!-- QR 2: Peminjaman Alatan Makmal -->
+                    <div class="rounded-3xl p-5 border border-indigo-100 bg-indigo-50/40 flex flex-col items-center justify-between text-center space-y-4">
+                        <div class="space-y-1">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700 font-extrabold text-[10px] uppercase">Borang 2</span>
+                            <h4 class="font-black text-slate-800 text-sm leading-snug">Borang Peminjaman Alatan Makmal</h4>
+                        </div>
+                        <div class="p-3.5 bg-white rounded-2xl border border-indigo-100 shadow-xs">
+                            <img id="qr-img-2"
+                                 src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSe1emwPTmOLBHEyDNoAh-6zAHzUDZUYEPFuA6hwr4qRPFVVzg%2Fviewform"
+                                 crossorigin="anonymous"
+                                 alt="QR Borang Peminjaman Alatan Makmal"
+                                 class="w-44 h-44 object-contain mx-auto">
+                        </div>
+                        <button onclick="downloadQrWithTitle('https://docs.google.com/forms/d/e/1FAIpQLSe1emwPTmOLBHEyDNoAh-6zAHzUDZUYEPFuA6hwr4qRPFVVzg/viewform', 'BORANG PEMINJAMAN ALATAN MAKMAL', 'QR_Peminjaman_Alatan_Makmal.png', '#4F46E5')"
+                                class="w-full py-2.5 px-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold text-xs shadow-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Muat Turun QR</span>
+                        </button>
+                    </div>
+
+                    <!-- QR 3: Aduan Kerosakan Alatan -->
+                    <div class="rounded-3xl p-5 border border-rose-100 bg-rose-50/40 flex flex-col items-center justify-between text-center space-y-4">
+                        <div class="space-y-1">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-extrabold text-[10px] uppercase">Borang 3</span>
+                            <h4 class="font-black text-slate-800 text-sm leading-snug">Borang Aduan Kerosakan Alatan</h4>
+                        </div>
+                        <div class="p-3.5 bg-white rounded-2xl border border-rose-100 shadow-xs">
+                            <img id="qr-img-3"
+                                 src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=10&data=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSd_CqfFLUWyj0wwBOzUVx8QT5CSQWBNKVdzQ2QBIR2Xl9v9hw%2Fviewform"
+                                 crossorigin="anonymous"
+                                 alt="QR Borang Aduan Kerosakan Alatan"
+                                 class="w-44 h-44 object-contain mx-auto">
+                        </div>
+                        <button onclick="downloadQrWithTitle('https://docs.google.com/forms/d/e/1FAIpQLSd_CqfFLUWyj0wwBOzUVx8QT5CSQWBNKVdzQ2QBIR2Xl9v9hw/viewform', 'BORANG ADUAN KEROSAKAN ALATAN', 'QR_Aduan_Kerosakan_Alatan.png', '#E11D48')"
+                                class="w-full py-2.5 px-4 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white font-bold text-xs shadow-sm transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Muat Turun QR</span>
+                        </button>
+                    </div>
+
                 </div>
             </div>
 
@@ -1778,6 +1857,36 @@
             switchTab('utama');
         }
 
+        // Muat Turun Imej Kod QR (PNG Resolusi Tinggi 600x600)
+        async function downloadQrCode(formUrl, filename, btnEl) {
+            const originalHtml = btnEl ? btnEl.innerHTML : '';
+            if (btnEl) {
+                btnEl.disabled = true;
+                btnEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Memuat Turun...</span>';
+            }
+            const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=16&format=png&data=${encodeURIComponent(formUrl)}`;
+            try {
+                const response = await fetch(qrApiUrl);
+                if (!response.ok) throw new Error('Gagal memuat turun fail QR');
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = blobUrl;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 2000);
+            } catch (err) {
+                window.open(qrApiUrl, '_blank');
+            } finally {
+                if (btnEl) {
+                    btnEl.disabled = false;
+                    btnEl.innerHTML = originalHtml;
+                }
+            }
+        }
+
         // Tarik data permohonan baharu (Baru Mohon) daripada Google Sheets Permohonan
         function fetchNewBookings() {
             const tbody = document.getElementById('admin-new-bookings-body');
@@ -2069,6 +2178,104 @@
                 `;
                 tbody.appendChild(tr);
             });
+        }
+
+        // Fungsi Muat Turun QR Berserta Tajuk Rasmi di Bahagian Atas Imej
+        function downloadQrWithTitle(formUrl, formTitle, fileName, accentColor = '#6D28D9') {
+            const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=16&data=${encodeURIComponent(formUrl)}`;
+            const qrImage = new Image();
+            qrImage.crossOrigin = 'anonymous';
+
+            qrImage.onload = function () {
+                const canvasWidth = 760;
+                const padding = 48;
+                const qrDrawSize = 540;
+
+                const tempCanvas = document.createElement('canvas');
+                const tCtx = tempCanvas.getContext('2d');
+                tCtx.font = '800 30px "Plus Jakarta Sans", Arial, sans-serif';
+
+                // Pecahkan tajuk panjang kepada beberapa baris agar kemas di bahagian atas QR
+                const words = formTitle.toUpperCase().split(' ');
+                const titleLines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    const testLine = currentLine ? `${currentLine} ${word}` : word;
+                    if (tCtx.measureText(testLine).width > canvasWidth - padding * 2 && currentLine) {
+                        titleLines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = testLine;
+                    }
+                });
+                if (currentLine) titleLines.push(currentLine);
+
+                const headerSubtitleHeight = 36;
+                const lineHeight = 40;
+                const titleBlockHeight = headerSubtitleHeight + (titleLines.length * lineHeight) + 28;
+                const footerHeight = 44;
+                const canvasHeight = padding + titleBlockHeight + qrDrawSize + footerHeight + padding;
+
+                const canvas = document.createElement('canvas');
+                canvas.width = canvasWidth;
+                canvas.height = canvasHeight;
+                const ctx = canvas.getContext('2d');
+
+                // Latar belakang putih bersih
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+                // Bingkai luar kemas
+                ctx.strokeStyle = '#E2E8F0';
+                ctx.lineWidth = 4;
+                ctx.strokeRect(16, 16, canvasWidth - 32, canvasHeight - 32);
+
+                // Jalur warna tema di bahagian paling atas
+                ctx.fillStyle = accentColor;
+                ctx.fillRect(16, 16, canvasWidth - 32, 14);
+
+                // Sub-tajuk Jabatan di atas tajuk borang
+                ctx.fillStyle = accentColor;
+                ctx.font = '700 18px "Plus Jakarta Sans", Arial, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('e-MAKMAL JMSK • POLITEKNIK PORT DICKSON', canvasWidth / 2, padding + 20);
+
+                // Tajuk Utama Borang di bahagian atas QR
+                ctx.fillStyle = '#0F172A';
+                ctx.font = '800 30px "Plus Jakarta Sans", Arial, sans-serif';
+                titleLines.forEach((line, idx) => {
+                    ctx.fillText(line, canvasWidth / 2, padding + 64 + (idx * lineHeight));
+                });
+
+                // Lukis Imej Kod QR di bawah tajuk
+                const qrX = (canvasWidth - qrDrawSize) / 2;
+                const qrY = padding + titleBlockHeight;
+                ctx.drawImage(qrImage, qrX, qrY, qrDrawSize, qrDrawSize);
+
+                // Nota imbasan di bahagian bawah
+                ctx.fillStyle = '#64748B';
+                ctx.font = '600 18px "Plus Jakarta Sans", Arial, sans-serif';
+                ctx.fillText('Sila imbas kod QR di atas untuk mengisi borang', canvasWidth / 2, qrY + qrDrawSize + 30);
+
+                // Cetuskan muat turun fail PNG
+                canvas.toBlob(function (blob) {
+                    if (!blob) return;
+                    const blobUrl = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = blobUrl;
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+                }, 'image/png');
+            };
+
+            qrImage.onerror = function () {
+                window.open(qrApiUrl, '_blank');
+            };
+
+            qrImage.src = qrApiUrl;
         }
 
         // Mulakan jadual pada muat turun pertama
