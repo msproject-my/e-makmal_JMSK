@@ -182,7 +182,8 @@
                             Portal e-Makmal <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">JMSK</span>
                         </h1>
                         <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-                            Platform berpusat bagi tempahan makmal MKEJ 1 & MKEJ 2, penggunaan dan peminjaman alatan serta aduan.
+                            Jabatan Matematik, Sains dan Komputer • Politeknik Port Dickson. 
+                            Platform berpusat bagi tempahan makmal MKEJ 1 & MKEJ 2, peminjaman perkakasan serta aduan fasiliti.
                         </p>
                     </div>
 
@@ -197,13 +198,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Grid Kandungan Dashboard (Susunan 2 Bahagian Seimbang) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Grid Kandungan Dashboard (Susunan 2 Bahagian Seimbang & Sejajar) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
                 
                 <!-- Kiri & Tengah: Galeri 4 Sudut Ruang Makmal (8 Kolum) -->
-                <div class="lg:col-span-8 bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-purple-100/80 shadow-[0_4px_25px_-5px_rgba(168,85,247,0.08)] space-y-4">
+                <div class="lg:col-span-8 bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-purple-100/80 shadow-[0_4px_25px_-5px_rgba(168,85,247,0.08)] flex flex-col justify-between space-y-4">
                     <div class="flex items-center justify-between pb-2 border-b border-slate-100">
                         <div class="flex items-center gap-3">
                             <div class="w-9 h-9 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-sm">
@@ -214,20 +213,16 @@
                                 <p class="text-[11px] text-slate-400 font-medium">MKEJ 1 & MKEJ 2 • Gambaran Sudut Makmal</p>
                             </div>
                         </div>
-                        <span class="text-[11px] font-semibold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full flex items-center gap-1">
-                            <i class="fa-solid fa-circle-info text-[10px]"></i>
-                            <span>Klik untuk paparan besar</span>
-                        </span>
                     </div>
 
                     <!-- 4 Gambar Makmal Grid (2x2) Berserta Gradient & Teks Label -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 my-auto">
                         <!-- 1. MKEJ 1 Depan -->
                         <div onclick="openLightbox(0)" class="relative group rounded-2xl overflow-hidden aspect-video bg-slate-800 cursor-pointer shadow-sm border border-purple-50">
                             <img id="lab-img-0" src="https://lh3.googleusercontent.com/d/1juywMPcBanqtfwnJCFNh9kFHDNJHzMFJ=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1juywMPcBanqtfwnJCFNh9kFHDNJHzMFJ&sz=w1200';" alt="MKEJ 1 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 1 • 
+                                    MKEJ 1 • Bahagian Depan
                                 </p>
                             </div>
                         </div>
@@ -237,7 +232,7 @@
                             <img id="lab-img-1" src="https://lh3.googleusercontent.com/d/1GneFPRaBJYQ4TXJfaQtesoJDY_WplPSd=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1GneFPRaBJYQ4TXJfaQtesoJDY_WplPSd&sz=w1200';" alt="MKEJ 1 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 1 • 
+                                    MKEJ 1 • Bahagian Belakang
                                 </p>
                             </div>
                         </div>
@@ -247,7 +242,7 @@
                             <img id="lab-img-2" src="https://lh3.googleusercontent.com/d/1ZWXuas2YswHscDalnr7oE0pGFZKOxL_8=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1ZWXuas2YswHscDalnr7oE0pGFZKOxL_8&sz=w1200';" alt="MKEJ 2 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 2 • 
+                                    MKEJ 2 • Bahagian Depan
                                 </p>
                             </div>
                         </div>
@@ -257,49 +252,36 @@
                             <img id="lab-img-3" src="https://lh3.googleusercontent.com/d/1bfhmMZLqH8O6TyAUiaAW6qnp_Ss24IuN=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1bfhmMZLqH8O6TyAUiaAW6qnp_Ss24IuN&sz=w1200';" alt="MKEJ 2 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 2 • 
+                                    MKEJ 2 • Bahagian Belakang
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kanan: Nota Syarat & Kad Akses Pantas (4 Kolum) -->
-                <div class="lg:col-span-4 space-y-4">
+                <!-- Kanan: Nota Syarat Tempahan Sejajar Tinggi Dengan Galeri Gambar (4 Kolum) -->
+                <div class="lg:col-span-4 flex flex-col">
                     
-                    <!-- Kad Kuning/Peach Syarat Tempahan (Pin Nota) -->
-                    <div class="bg-amber-50/90 border border-amber-200/70 rounded-3xl p-6 shadow-sm relative overflow-hidden">
-                        <div class="w-7 h-7 rounded-full bg-amber-400 text-white flex items-center justify-center text-xs shadow-md mx-auto mb-3">
+                    <!-- Kad Kuning/Peach Syarat Tempahan (Pin Nota Penuh Sejajar) -->
+                    <div class="bg-amber-50/95 border border-amber-200/80 rounded-3xl p-7 sm:p-8 shadow-sm relative overflow-hidden flex-1 flex flex-col items-center justify-center text-center">
+                        <div class="w-11 h-11 rounded-2xl bg-amber-400 text-white flex items-center justify-center text-base shadow-md mx-auto mb-4">
                             <i class="fa-solid fa-thumbtack"></i>
                         </div>
 
-                        <div class="text-center space-y-2">
-                            <span class="text-[11px] font-black uppercase tracking-wider text-amber-800">Syarat Tempahan</span>
-                            <p class="text-xs text-amber-900/90 font-bold leading-relaxed">
-                                Tempahan boleh dibuat bermula jam 9.00 pagi, bagi kegunaan minggu berikutnya.
+                        <div class="space-y-4 max-w-xs mx-auto">
+                            <span class="inline-block px-3.5 py-1 rounded-full bg-amber-200/60 text-xs font-black uppercase tracking-wider text-amber-900">
+                                Syarat Tempahan
+                            </span>
+                            <p class="text-sm sm:text-base text-amber-950 font-bold leading-relaxed">
+                                Tempahan boleh dibuat pada minggu yang sama cadangan penggunaan makmal.
                             </p>
-                            <div class="pt-2 border-t border-amber-200/60">
-                                <p class="text-[11px] text-amber-800/80 font-medium">Kelulusan berdasarkan kepada:</p>
-                                <span class="inline-block mt-1 font-black text-amber-900 text-xs bg-amber-200/60 px-3 py-1 rounded-xl">
-                                    '1st Come, 1st Served'
+                            <div class="pt-4 border-t border-amber-200/80 space-y-2">
+                                <p class="text-xs text-amber-800/90 font-semibold">Kelulusan mengikut giliran masa:</p>
+                                <span class="inline-block font-black text-amber-950 text-sm bg-amber-300/60 px-4 py-2 rounded-2xl shadow-2xs">
+                                    1st Come, 1st Served
                                 </span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Kad Ungu Gelap Akses Pantas (Buka Borang Tempahan) -->
-                    <div class="bg-gradient-to-br from-purple-700 to-indigo-800 rounded-3xl p-6 text-white shadow-lg space-y-4">
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs font-bold text-purple-200">Akses Pantas</span>
-                            <span id="badge-sesi-utama" class="text-[10px] bg-white/20 text-white px-2.5 py-0.5 rounded-full font-semibold">Sesi Semasa</span>
-                        </div>
-                        <p class="text-xs text-purple-100 font-medium leading-relaxed">
-                            Berminat menggunakan fasiliti makmal minggu ini?
-                        </p>
-                        <button onclick="switchTab('tempahan')" class="w-full py-3 px-4 bg-white hover:bg-purple-50 text-purple-800 font-extrabold text-xs sm:text-sm rounded-2xl shadow-sm transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calendar-plus text-xs"></i>
-                            <span>Buka Borang Tempahan</span>
-                        </button>
                     </div>
 
                 </div>
@@ -950,6 +932,54 @@
     </div>
 
     <!-- ========================================================================= -->
+    <!-- MODAL 3: LOG MASUK PENTADBIR (PENGURUSAN MAKMAL) -->
+    <!-- ========================================================================= -->
+    <div id="admin-login-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-sm w-full border border-purple-100 shadow-2xl space-y-5">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center">
+                        <i class="fa-solid fa-user-shield text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-black text-slate-800 text-base">Akses Pentadbir Makmal</h3>
+                        <p class="text-[11px] text-slate-400">Sila masukkan kata laluan Admin JMSK</p>
+                    </div>
+                </div>
+                <button onclick="closeAdminLoginModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-sm"></i>
+                </button>
+            </div>
+
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4 text-xs">
+                <div>
+                    <label for="admin-password-input" class="block font-bold text-slate-700 mb-1.5">Kata Laluan Pentadbir</label>
+                    <div class="relative">
+                        <input type="password" id="admin-password-input" required placeholder="Masukkan kata laluan..." class="w-full pl-3.5 pr-10 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-purple-600 text-sm">
+                        <button type="button" onclick="toggleAdminPasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-purple-600 transition" title="Papar / Sembunyi Kata Laluan">
+                            <i id="admin-eye-icon" class="fa-solid fa-eye text-xs"></i>
+                        </button>
+                    </div>
+                    <p id="admin-login-error" class="hidden text-rose-600 font-bold text-[11px] mt-1.5 flex items-center gap-1">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span>Kata laluan tidak sah. Sila cuba lagi.</span>
+                    </p>
+                </div>
+
+                <div class="pt-1 flex items-center gap-2">
+                    <button type="submit" class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold shadow-sm transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-unlock-keyhole text-xs"></i>
+                        <span>Log Masuk</span>
+                    </button>
+                    <button type="button" onclick="closeAdminLoginModal()" class="py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold transition">
+                        Batal
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
     <!-- JAVASCRIPT LOGIK SISTEM -->
     <!-- ========================================================================= -->
     <script>
@@ -1524,8 +1554,17 @@
             showGalleryNotice('Semua gambar ruang makmal telah dikembalikan kepada tetapan asal.');
         }
 
-        // Fungsi Tukar Tab
+        // Kawalan Pengesahan Log Masuk Admin
+        const ADMIN_PASSWORD = 'admin2026';
+        let isAdminAuthenticated = false;
+
+        // Fungsi Tukar Tab (Dengan Sekatan Log Masuk untuk Tab Pengurusan Makmal)
         function switchTab(tabId) {
+            if (tabId === 'pengurusan' && !isAdminAuthenticated) {
+                openAdminLoginModal();
+                return;
+            }
+
             document.querySelectorAll('.tab-content').forEach(section => {
                 section.classList.add('hidden');
             });
@@ -1544,6 +1583,58 @@
             }
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Buka Popup Log Masuk Admin
+        function openAdminLoginModal() {
+            const modal = document.getElementById('admin-login-modal');
+            const input = document.getElementById('admin-password-input');
+            const errorMsg = document.getElementById('admin-login-error');
+            if (input) input.value = '';
+            if (errorMsg) errorMsg.classList.add('hidden');
+            if (modal) {
+                modal.classList.remove('hidden');
+                setTimeout(() => { if (input) input.focus(); }, 100);
+            }
+        }
+
+        // Tutup Popup Log Masuk Admin
+        function closeAdminLoginModal() {
+            const modal = document.getElementById('admin-login-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        // Papar / Sembunyi Kata Laluan
+        function toggleAdminPasswordVisibility() {
+            const input = document.getElementById('admin-password-input');
+            const icon = document.getElementById('admin-eye-icon');
+            if (!input || !icon) return;
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.className = 'fa-solid fa-eye-slash text-xs';
+            } else {
+                input.type = 'password';
+                icon.className = 'fa-solid fa-eye text-xs';
+            }
+        }
+
+        // Sahkan Kata Laluan Admin
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            const input = document.getElementById('admin-password-input');
+            const errorMsg = document.getElementById('admin-login-error');
+            if (!input) return;
+
+            if (input.value === ADMIN_PASSWORD) {
+                isAdminAuthenticated = true;
+                if (errorMsg) errorMsg.classList.add('hidden');
+                closeAdminLoginModal();
+                switchTab('pengurusan');
+            } else {
+                if (errorMsg) errorMsg.classList.remove('hidden');
+                input.focus();
+                input.select();
+            }
         }
 
         // Tukar Paparan Makmal (MKEJ 1 atau MKEJ 2)
@@ -1681,8 +1772,9 @@
             document.getElementById('lightbox-modal').classList.add('hidden');
         }
 
-        // Dummy Logout
+        // Log Keluar Pentadbir
         function logoutAdmin() {
+            isAdminAuthenticated = false;
             switchTab('utama');
         }
 
