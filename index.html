@@ -108,44 +108,53 @@
             transform: scale(1.02);
             z-index: 10;
         }
+
+        /* Latar Belakang Geometri Ungu-Biru Gelap (Mengikut Imej Rujukan) */
+        .custom-purple-bg {
+            background-color: #160A4A;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080' viewBox='0 0 1920 1080' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%236B238E'/%3E%3Cstop offset='45%25' stop-color='%23391370'/%3E%3Cstop offset='100%25' stop-color='%23100A47'/%3E%3C/linearGradient%3E%3ClinearGradient id='hexGrad' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff' stop-opacity='0.09'/%3E%3Cstop offset='85%25' stop-color='%23ffffff' stop-opacity='0.01'/%3E%3Cstop offset='100%25' stop-color='%23ffffff' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23bgGrad)'/%3E%3C!-- Separa Bulatan & Bingkai Ungu Neon Kiri --%3E%3Ccircle cx='-60' cy='540' r='430' fill='%23ffffff' fill-opacity='0.05'/%3E%3Crect x='-10' y='115' width='380' height='845' fill='none' stroke='%239342FF' stroke-width='3'/%3E%3C!-- Bentuk Heksagon Geometri Kanan --%3E%3Cpolygon points='1030,-40 1920,-40 1920,390 1180,390 875,80' fill='url(%23hexGrad)'/%3E%3Cpolygon points='1590,230 1920,230 1920,845 1590,845 1285,537' fill='url(%23hexGrad)'/%3E%3Cpolygon points='1180,695 1920,695 1920,1120 1030,1120 875,1005' fill='url(%23hexGrad)'/%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
     </style>
 </head>
-<body class="bg-[#FAF8FD] text-slate-700 min-h-screen flex flex-col antialiased selection:bg-purple-200 selection:text-purple-900">
+<body class="custom-purple-bg text-slate-700 min-h-screen flex flex-col antialiased selection:bg-purple-200 selection:text-purple-900">
 
     <!-- Header & Navigation Bar Utama -->
-    <header class="px-4 sm:px-8 py-3 bg-transparent">
+    <header class="px-4 sm:px-8 py-3 bg-white/10 backdrop-blur-md border-b border-white/10">
         <div class="max-w-[96%] 2xl:max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
             
             <!-- Logo & Brand JMSK PPD -->
             <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-2xl bg-purple-100/90 text-purple-600 flex items-center justify-center text-xl shadow-xs border border-purple-200/50">
+                <div class="w-11 h-11 rounded-2xl bg-white/15 text-purple-200 flex items-center justify-center text-xl shadow-xs border border-white/20 backdrop-blur-sm">
                     <i class="fa-solid fa-flask-vial"></i>
                 </div>
                 <div>
                     <div class="flex items-center gap-2">
-                        <span class="text-base sm:text-lg font-black text-slate-800 tracking-tight">e-Makmal <span class="text-purple-600">JMSK</span></span>
-                        <span class="px-2 py-0.5 rounded-full bg-slate-200/70 text-slate-600 font-extrabold text-[10px]">PPD</span>
+                        <span class="text-base sm:text-lg font-black text-white tracking-tight">e-Makmal <span class="text-purple-300">JMSK</span></span>
+                        <span class="px-2 py-0.5 rounded-full bg-white/20 text-white font-extrabold text-[10px]">PPD</span>
                     </div>
-                    <p class="text-[11px] text-slate-400 font-medium">Portal Pengurusan & Tempahan Makmal</p>
+                    <p class="text-[11px] text-purple-200/80 font-medium">Portal Pengurusan & Tempahan Makmal</p>
                 </div>
             </div>
 
-            <!-- Menu Butang Navigasi (Pill Style Persis Imej) -->
+            <!-- Menu Butang Navigasi (Pill Style Kontras Gelap) -->
             <nav class="flex items-center gap-1 sm:gap-2 flex-wrap text-xs font-bold">
                 <button onclick="switchTab('utama')" id="nav-utama" class="nav-item active px-5 py-2 rounded-full text-white bg-purple-600 shadow-sm transition">
                     UTAMA
                 </button>
-                <button onclick="switchTab('dasar')" id="nav-dasar" class="nav-item px-4 py-2 rounded-full text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition">
+                <button onclick="switchTab('dasar')" id="nav-dasar" class="nav-item px-4 py-2 rounded-full text-white/90 hover:text-purple-700 hover:bg-white transition">
                     DASAR KESELAMATAN
                 </button>
-                <button onclick="switchTab('tempahan')" id="nav-tempahan" class="nav-item px-4 py-2 rounded-full text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition">
+                <button onclick="switchTab('tempahan')" id="nav-tempahan" class="nav-item px-4 py-2 rounded-full text-white/90 hover:text-purple-700 hover:bg-white transition">
                     TEMPAHAN MAKMAL
                 </button>
-                <button onclick="switchTab('peralatan')" id="nav-peralatan" class="nav-item px-4 py-2 rounded-full text-slate-600 hover:text-purple-700 hover:bg-purple-50 transition">
+                <button onclick="switchTab('peralatan')" id="nav-peralatan" class="nav-item px-4 py-2 rounded-full text-white/90 hover:text-purple-700 hover:bg-white transition">
                     PENGGUNAAN ALATAN
                 </button>
-                <button onclick="switchTab('pengurusan')" id="nav-pengurusan" class="nav-item px-4 py-2 rounded-full text-slate-600 hover:text-purple-700 hover:bg-purple-50 flex items-center gap-1.5 transition">
-                    <i class="fa-solid fa-lock text-[11px] text-purple-500"></i>
+                <button onclick="switchTab('pengurusan')" id="nav-pengurusan" class="nav-item px-4 py-2 rounded-full text-white/90 hover:text-purple-700 hover:bg-white flex items-center gap-1.5 transition">
+                    <i class="fa-solid fa-lock text-[11px] text-purple-300"></i>
                     <span>PENGURUSAN MAKMAL</span>
                 </button>
             </nav>
@@ -157,11 +166,11 @@
     <main class="max-w-[96%] 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 py-4 flex-1 w-full space-y-6">
 
         <!-- ========================================================================= -->
-        <!-- TAB 1: UTAMA (DASHBOARD) - 100% PERSIS IMEJ SAMPEL -->
+        <!-- TAB 1: UTAMA (DASHBOARD) -->
         <!-- ========================================================================= -->
         <section id="tab-utama" class="tab-content space-y-6">
 
-            <!-- Hero Banner Bersih & Ceria Pastel Persis Tangkapan Skrin -->
+            <!-- Hero Banner Bersih & Ceria Pastel -->
             <div class="relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-purple-100/90 via-indigo-50/80 to-blue-50/70 border border-purple-100/90 shadow-[0_4px_30px_-5px_rgba(168,85,247,0.1)]">
                 <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
                     <div class="space-y-2.5 max-w-2xl">
@@ -173,12 +182,11 @@
                             Portal e-Makmal <span class="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">JMSK</span>
                         </h1>
                         <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-medium">
-                            Jabatan Matematik, Sains dan Komputer • Politeknik Port Dickson. 
-                            Platform berpusat bagi tempahan makmal MKEJ 1 & MKEJ 2, peminjaman perkakasan serta aduan fasiliti.
+                            Platform berpusat bagi tempahan makmal MKEJ 1 & MKEJ 2, penggunaan dan peminjaman alatan serta aduan.
                         </p>
                     </div>
 
-                    <!-- Lencana Makmal Sedia Ada (1 Baris Kemas) -->
+                    <!-- Lencana Makmal Sedia Ada -->
                     <div class="flex items-center gap-3 bg-white/95 backdrop-blur-md px-5 py-3.5 rounded-2xl border border-purple-100 shadow-sm shrink-0 self-start lg:self-center">
                         <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg shrink-0">
                             <i class="fa-solid fa-microscope"></i>
@@ -191,37 +199,11 @@
                 </div>
             </div>
 
-            <!-- Grid Kandungan Dashboard (Susunan 3 Bahagian Tepat Seperti Gambar) -->
+            <!-- Grid Kandungan Dashboard (Susunan 2 Bahagian Seimbang) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
-                <!-- Kiri: Kad Tanya Admin & Hubungi Pegawai (3 Kolum) -->
-                <div class="lg:col-span-3 space-y-4">
-                    <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-purple-100/80 shadow-[0_4px_25px_-5px_rgba(168,85,247,0.08)] text-center flex flex-col items-center">
-                        <div onclick="openContactModal()" class="cursor-pointer w-24 h-24 rounded-full bg-gradient-to-tr from-purple-100 to-indigo-50 border-4 border-purple-200/60 p-2 flex flex-col items-center justify-center shadow-inner hover:scale-105 transition duration-300 relative group">
-                            <i class="fa-solid fa-comments text-purple-600 text-2xl group-hover:scale-110 transition-transform"></i>
-                            <span class="text-[9px] font-black uppercase text-purple-700 tracking-wider mt-1">Tanya Admin</span>
-                        </div>
-
-                        <div class="mt-4 space-y-1">
-                            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-600 text-[11px] font-bold">
-                                <i class="fa-solid fa-circle-check text-[10px]"></i>
-                                <span>Servis Sedia Digunakan</span>
-                            </div>
-                            <h3 class="font-extrabold text-slate-800 text-sm sm:text-base pt-1">Ada Pertanyaan / Aduan?</h3>
-                            <p class="text-xs text-slate-400 font-medium leading-relaxed">
-                                Klik butang di bawah untuk terus berhubung dengan pegawai makmal JMSK.
-                            </p>
-                        </div>
-
-                        <button onclick="openContactModal()" class="w-full mt-5 py-3 px-4 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-purple-500/20 transition flex items-center justify-center gap-2 group">
-                            <i class="fa-solid fa-paper-plane text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                            <span>Hubungi Pembantu Makmal</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Tengah: Galeri 4 Sudut Ruang Makmal (6 Kolum) -->
-                <div class="lg:col-span-6 bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-purple-100/80 shadow-[0_4px_25px_-5px_rgba(168,85,247,0.08)] space-y-4">
+                <!-- Kiri & Tengah: Galeri 4 Sudut Ruang Makmal (8 Kolum) -->
+                <div class="lg:col-span-8 bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-purple-100/80 shadow-[0_4px_25px_-5px_rgba(168,85,247,0.08)] space-y-4">
                     <div class="flex items-center justify-between pb-2 border-b border-slate-100">
                         <div class="flex items-center gap-3">
                             <div class="w-9 h-9 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-sm">
@@ -242,48 +224,48 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                         <!-- 1. MKEJ 1 Depan -->
                         <div onclick="openLightbox(0)" class="relative group rounded-2xl overflow-hidden aspect-video bg-slate-800 cursor-pointer shadow-sm border border-purple-50">
-                            <img id="lab-img-0" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="MKEJ 1 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img id="lab-img-0" src="https://lh3.googleusercontent.com/d/1juywMPcBanqtfwnJCFNh9kFHDNJHzMFJ=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1juywMPcBanqtfwnJCFNh9kFHDNJHzMFJ&sz=w1200';" alt="MKEJ 1 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 1
+                                    MKEJ 1 • 
                                 </p>
                             </div>
                         </div>
 
                         <!-- 2. MKEJ 1 Belakang -->
                         <div onclick="openLightbox(1)" class="relative group rounded-2xl overflow-hidden aspect-video bg-slate-800 cursor-pointer shadow-sm border border-purple-50">
-                            <img id="lab-img-1" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="MKEJ 1 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img id="lab-img-1" src="https://lh3.googleusercontent.com/d/1GneFPRaBJYQ4TXJfaQtesoJDY_WplPSd=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1GneFPRaBJYQ4TXJfaQtesoJDY_WplPSd&sz=w1200';" alt="MKEJ 1 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 1
+                                    MKEJ 1 • 
                                 </p>
                             </div>
                         </div>
 
                         <!-- 3. MKEJ 2 Depan -->
                         <div onclick="openLightbox(2)" class="relative group rounded-2xl overflow-hidden aspect-video bg-slate-800 cursor-pointer shadow-sm border border-purple-50">
-                            <img id="lab-img-2" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="MKEJ 2 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img id="lab-img-2" src="https://lh3.googleusercontent.com/d/1ZWXuas2YswHscDalnr7oE0pGFZKOxL_8=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1ZWXuas2YswHscDalnr7oE0pGFZKOxL_8&sz=w1200';" alt="MKEJ 2 Depan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 2
+                                    MKEJ 2 • 
                                 </p>
                             </div>
                         </div>
 
                         <!-- 4. MKEJ 2 Belakang -->
                         <div onclick="openLightbox(3)" class="relative group rounded-2xl overflow-hidden aspect-video bg-slate-800 cursor-pointer shadow-sm border border-purple-50">
-                            <img id="lab-img-3" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=800&q=80" alt="MKEJ 2 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img id="lab-img-3" src="https://lh3.googleusercontent.com/d/1bfhmMZLqH8O6TyAUiaAW6qnp_Ss24IuN=w1200" onerror="this.onerror=null;this.src='https://drive.google.com/thumbnail?id=1bfhmMZLqH8O6TyAUiaAW6qnp_Ss24IuN&sz=w1200';" alt="MKEJ 2 Belakang" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end p-3 pointer-events-none">
                                 <p class="text-white text-[11px] font-bold leading-tight drop-shadow-md">
-                                    MKEJ 2
+                                    MKEJ 2 • 
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kanan: Nota Syarat & Kad Akses Pantas (3 Kolum) -->
-                <div class="lg:col-span-3 space-y-4">
+                <!-- Kanan: Nota Syarat & Kad Akses Pantas (4 Kolum) -->
+                <div class="lg:col-span-4 space-y-4">
                     
                     <!-- Kad Kuning/Peach Syarat Tempahan (Pin Nota) -->
                     <div class="bg-amber-50/90 border border-amber-200/70 rounded-3xl p-6 shadow-sm relative overflow-hidden">
@@ -294,12 +276,12 @@
                         <div class="text-center space-y-2">
                             <span class="text-[11px] font-black uppercase tracking-wider text-amber-800">Syarat Tempahan</span>
                             <p class="text-xs text-amber-900/90 font-bold leading-relaxed">
-                                Tempahan boleh dibuat pada minggu yang sama cadangan penggunaan makmal.
+                                Tempahan boleh dibuat bermula jam 9.00 pagi, bagi kegunaan minggu berikutnya.
                             </p>
                             <div class="pt-2 border-t border-amber-200/60">
-                                <p class="text-[11px] text-amber-800/80 font-medium">Kelulusan mengikut giliran masa:</p>
+                                <p class="text-[11px] text-amber-800/80 font-medium">Kelulusan berdasarkan kepada:</p>
                                 <span class="inline-block mt-1 font-black text-amber-900 text-xs bg-amber-200/60 px-3 py-1 rounded-xl">
-                                    1st Come, 1st Served
+                                    '1st Come, 1st Served'
                                 </span>
                             </div>
                         </div>
@@ -448,11 +430,11 @@
         </section>
 
         <!-- ========================================================================= -->
-        <!-- TAB 3: TEMPAHAN MAKMAL (REKA BENTUK KEMAS 3 KAD ASAL) -->
+        <!-- TAB 3: TEMPAHAN MAKMAL (REKA BENTUK KEMAS 3 KAD) -->
         <!-- ========================================================================= -->
         <section id="tab-tempahan" class="tab-content hidden space-y-6">
 
-            <!-- 3 Kad Utama Moden Pastel Bersanding (Sama Seperti Gambar Asal) -->
+            <!-- 3 Kad Utama Moden Pastel Bersanding -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                 
                 <!-- Kad 1: Jadual Waktu Makmal -->
@@ -466,7 +448,7 @@
                             <p class="text-xs text-slate-400 mt-0.5">Semak slot kosong semasa MKEJ 1 & MKEJ 2</p>
                         </div>
                     </div>
-                    <a href="https://drive.google.com/file/d/1Gaqxy6pnguQwyWalAakmBj3ZCQgTgOox/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold text-xs sm:text-sm rounded-2xl border border-purple-200/70 text-center transition flex items-center justify-center gap-2">
+                    <a href="https://drive.google.com/file/d/1Gaqxy6pnguQwyWalAakmBj3ZCQgTgOox/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm shadow-purple-500/20 text-center transition flex items-center justify-center gap-2">
                         <span>Papar Jadual Makmal</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </a>
@@ -483,7 +465,7 @@
                             <p class="text-xs text-slate-400 mt-0.5">Pautan Google Form tempahan rasmi makmal</p>
                         </div>
                     </div>
-                    <a href="https://forms.gle/mRRDBA6dP4fg3ahM9" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm text-center transition flex items-center justify-center gap-2">
+                    <a href="https://forms.gle/mRRDBA6dP4fg3ahM9" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm shadow-emerald-500/20 text-center transition flex items-center justify-center gap-2">
                         <span>Buka Google Form</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </a>
@@ -500,7 +482,7 @@
                             <p class="text-xs text-slate-400 mt-0.5">Status permohonan terkini makmal</p>
                         </div>
                     </div>
-                    <a href="https://docs.google.com/spreadsheets/d/1HbB_3RbwPIutZgYKhDrqV_ZZX1U16RSIHjGIfbCOIkg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-amber-50 hover:bg-amber-100 text-amber-800 font-bold text-xs sm:text-sm rounded-2xl border border-amber-200/70 text-center transition flex items-center justify-center gap-2">
+                    <a href="https://docs.google.com/spreadsheets/d/1HbB_3RbwPIutZgYKhDrqV_ZZX1U16RSIHjGIfbCOIkg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm shadow-amber-500/20 text-center transition flex items-center justify-center gap-2">
                         <span>Semak Kelulusan</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </a>
@@ -509,116 +491,32 @@
             </div>
 
             <!-- Jadual Waktu Penggunaan Makmal JMSK (Kad Besar Bawah) -->
-            <div id="timetable-section" class="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-7 border border-purple-100 shadow-[0_4px_30px_-5px_rgba(168,85,247,0.08)] space-y-6">
+            <div id="timetable-section" class="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-7 border border-purple-100 shadow-[0_4px_30px_-5px_rgba(168,85,247,0.08)] space-y-5">
                 
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-slate-100">
                     <div>
                         <h3 class="text-base sm:text-lg font-black text-slate-800 tracking-tight">JADUAL WAKTU PENGGUNAAN MAKMAL JMSK</h3>
-                        <p id="label-sesi-jadual" class="text-xs text-purple-700 font-bold">Memuatkan Maklumat Sesi dari Google Sheets...</p>
+                        <p id="label-sesi-jadual" class="text-xs text-purple-700 font-bold">Paparan Langsung Google Sheets Rasmi (Klik Tab di Bahagian Bawah Jadual)</p>
                     </div>
 
-                    <!-- Status Kemas Kini Automatik Dari Admin -->
+                    <!-- Butang Segerak Semula & Buka Penuh -->
                     <div class="flex items-center gap-2 self-start sm:self-center">
-                        <button onclick="fetchSheetData()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-bold border border-purple-200/60 shadow-xs transition active:scale-95" title="Klik untuk tarik data terkini dari Google Sheets">
+                        <button onclick="reloadUserTimetableEmbed()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-bold border border-purple-200/60 shadow-xs transition active:scale-95" title="Muat semula paparan terkini Google Sheets">
                             <span id="sync-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            <span id="sync-status-text">Segerak Terkini (Live Sync)</span>
+                            <span id="sync-status-text">Segerak Langsung</span>
                             <i class="fa-solid fa-arrows-rotate text-[10px] ml-1"></i>
                         </button>
                     </div>
                 </div>
 
-                <!-- Pemilih Minggu (Pill Selector) -->
-                <div id="week-selector-container" class="flex items-center gap-2 overflow-x-auto pb-2 select-none">
-                    <button id="week-btn-1" onclick="selectWeek(1)" class="week-pill px-4 py-2 rounded-2xl text-xs font-extrabold bg-purple-600 text-white shadow-xs shrink-0 transition">
-                        Minggu 1
-                    </button>
-                    <button id="week-btn-2" onclick="selectWeek(2)" class="week-pill px-4 py-2 rounded-2xl text-xs font-extrabold bg-slate-100 text-slate-600 hover:bg-purple-50 shrink-0 transition">
-                        Minggu 2
-                    </button>
-                    <button id="week-btn-3" onclick="selectWeek(3)" class="week-pill px-4 py-2 rounded-2xl text-xs font-extrabold bg-slate-100 text-slate-600 hover:bg-purple-50 shrink-0 transition">
-                        Minggu 3
-                    </button>
-                    <button id="week-btn-4" onclick="selectWeek(4)" class="week-pill px-4 py-2 rounded-2xl text-xs font-extrabold bg-slate-100 text-slate-600 hover:bg-purple-50 shrink-0 transition">
-                        Minggu 4
-                    </button>
-                    <button id="week-btn-5" onclick="selectWeek(5)" class="week-pill px-4 py-2 rounded-2xl text-xs font-extrabold bg-slate-100 text-slate-600 hover:bg-purple-50 shrink-0 transition">
-                        Minggu 5
-                    </button>
-                </div>
-
-                <!-- Kontena Jadual Interaktif (MKEJ 1 dan MKEJ 2 Sahaja Untuk User View) -->
-                <div id="interactive-timetable-wrap" class="space-y-6">
-                    
-                    <!-- 1. Jadual Makmal MKEJ 1 -->
-                    <div class="rounded-3xl border border-purple-100 bg-white overflow-hidden shadow-xs">
-                        <div class="px-5 py-3.5 bg-gradient-to-r from-purple-50 via-purple-50/50 to-white border-b border-purple-100 flex items-center justify-between">
-                            <div class="flex items-center gap-2.5">
-                                <span class="w-3 h-3 rounded-full bg-purple-600"></span>
-                                <h4 class="font-black text-slate-800 text-xs sm:text-sm tracking-wide">JADUAL PENGGUNAAN MAKMAL MKEJ 1</h4>
-                            </div>
-                            <span class="text-[11px] font-bold text-purple-700 bg-purple-100/70 px-3 py-1 rounded-full">Slot Kosong Sedia Ditempah</span>
-                        </div>
-                        
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-center text-xs">
-                                <thead>
-                                    <tr class="bg-slate-50 text-slate-700 font-extrabold border-b border-slate-100">
-                                        <th class="p-3 w-24">HARI</th>
-                                        <th class="p-3 w-28">TARIKH</th>
-                                        <th class="p-2 border-l border-slate-100">1<br><span class="font-normal text-[10px] text-slate-400">8.00 - 9.00</span></th>
-                                        <th class="p-2">2<br><span class="font-normal text-[10px] text-slate-400">9.00 - 10.00</span></th>
-                                        <th class="p-2 w-20 bg-amber-50/50 font-normal text-[10px] text-amber-700 leading-tight">10.00 - 10.15</th>
-                                        <th class="p-2">3<br><span class="font-normal text-[10px] text-slate-400">10.15 - 11.15</span></th>
-                                        <th class="p-2">4<br><span class="font-normal text-[10px] text-slate-400">11.15 - 12.15</span></th>
-                                        <th class="p-2">5<br><span class="font-normal text-[10px] text-slate-400">12.15 - 1.15</span></th>
-                                        <th class="p-2 w-20 bg-emerald-50/50 font-normal text-[10px] text-emerald-700 leading-tight">1.15 - 2.15</th>
-                                        <th class="p-2">6<br><span class="font-normal text-[10px] text-slate-400">2.15 - 3.15</span></th>
-                                        <th class="p-2">7<br><span class="font-normal text-[10px] text-slate-400">3.15 - 4.15</span></th>
-                                        <th class="p-2">8<br><span class="font-normal text-[10px] text-slate-400">4.15 - 5.15</span></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="timetable-body-mkej1" class="divide-y divide-slate-100">
-                                    <!-- Dijana secara dinamik oleh JavaScript -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- 2. Jadual Makmal MKEJ 2 -->
-                    <div class="rounded-3xl border border-indigo-100 bg-white overflow-hidden shadow-xs">
-                        <div class="px-5 py-3.5 bg-gradient-to-r from-indigo-50 via-indigo-50/50 to-white border-b border-indigo-100 flex items-center justify-between">
-                            <div class="flex items-center gap-2.5">
-                                <span class="w-3 h-3 rounded-full bg-indigo-600"></span>
-                                <h4 class="font-black text-slate-800 text-xs sm:text-sm tracking-wide">JADUAL PENGGUNAAN MAKMAL MKEJ 2</h4>
-                            </div>
-                            <span class="text-[11px] font-bold text-indigo-700 bg-indigo-100/70 px-3 py-1 rounded-full">Slot Kosong Sedia Ditempah</span>
-                        </div>
-                        
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-center text-xs">
-                                <thead>
-                                    <tr class="bg-slate-50 text-slate-700 font-extrabold border-b border-slate-100">
-                                        <th class="p-3 w-24">HARI</th>
-                                        <th class="p-3 w-28">TARIKH</th>
-                                        <th class="p-2 border-l border-slate-100">1<br><span class="font-normal text-[10px] text-slate-400">8.00 - 9.00</span></th>
-                                        <th class="p-2">2<br><span class="font-normal text-[10px] text-slate-400">9.00 - 10.00</span></th>
-                                        <th class="p-2 w-20 bg-amber-50/50 font-normal text-[10px] text-amber-700 leading-tight">10.00 - 10.15</th>
-                                        <th class="p-2">3<br><span class="font-normal text-[10px] text-slate-400">10.15 - 11.15</span></th>
-                                        <th class="p-2">4<br><span class="font-normal text-[10px] text-slate-400">11.15 - 12.15</span></th>
-                                        <th class="p-2">5<br><span class="font-normal text-[10px] text-slate-400">12.15 - 1.15</span></th>
-                                        <th class="p-2 w-20 bg-emerald-50/50 font-normal text-[10px] text-emerald-700 leading-tight">1.15 - 2.15</th>
-                                        <th class="p-2">6<br><span class="font-normal text-[10px] text-slate-400">2.15 - 3.15</span></th>
-                                        <th class="p-2">7<br><span class="font-normal text-[10px] text-slate-400">3.15 - 4.15</span></th>
-                                        <th class="p-2">8<br><span class="font-normal text-[10px] text-slate-400">4.15 - 5.15</span></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="timetable-body-mkej2" class="divide-y divide-slate-100">
-                                    <!-- Dijana secara dinamik oleh JavaScript -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
+                <!-- Paparan Langsung Google Sheets Berserta Tab Sebenar (Fixed Center View Tanpa Skrol) -->
+                <!-- Paparan Langsung Google Sheets Berserta Tab Sebenar (Native Crisp 100% Width) -->
+                <div id="user-gsheet-wrapper" class="rounded-3xl overflow-hidden border border-purple-100 bg-white shadow-xs w-full">
+                    <iframe id="user-gsheet-timetable-iframe"
+                            src="https://docs.google.com/spreadsheets/d/1XLx4nSJni_5nSBg-YIgdjdQvE9efhqHWhHUpn4wznf4/preview?rm=minimal"
+                            class="w-full h-[680px] border-0 bg-white block"
+                            loading="lazy">
+                    </iframe>
                 </div>
 
             </div>
@@ -642,7 +540,7 @@
                             <p class="text-xs text-slate-400 mt-0.5">Borang pendaftaran bagi sesi amali berjadual</p>
                         </div>
                     </div>
-                    <a href="https://forms.gle/tNvbMayjgffH1zbr5" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs sm:text-sm rounded-2xl border border-emerald-200/80 text-center transition flex items-center justify-center gap-2">
+                    <a href="https://forms.gle/tNvbMayjgffH1zbr5" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm shadow-emerald-500/20 text-center transition flex items-center justify-center gap-2">
                         <span>Borang Penggunaan Alatan</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </a>
@@ -659,7 +557,7 @@
                             <p class="text-xs text-slate-400 mt-0.5">Permohonan pinjaman alatan untuk PdP / Projek</p>
                         </div>
                     </div>
-                    <a href="https://forms.gle/KrsspRKxckvbGpBi6" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs sm:text-sm rounded-2xl border border-indigo-200/80 text-center transition flex items-center justify-center gap-2">
+                    <a href="https://forms.gle/KrsspRKxckvbGpBi6" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm shadow-indigo-500/20 text-center transition flex items-center justify-center gap-2">
                         <span>Borang Peminjaman Alatan</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                     </a>
@@ -681,31 +579,31 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="rounded-2xl overflow-hidden border border-purple-100 bg-slate-900 shadow-sm flex flex-col">
                         <div class="aspect-video w-full bg-slate-800">
-                            <iframe src="https://www.youtube.com/embed/GjReQxn0Gm8" class="w-full h-full border-0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/GjReQxn0Gm8" title="Eksperimen 1: Gerakan Linear" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="w-full h-full border-0" allowfullscreen></iframe>
                         </div>
-                        <div class="p-3 bg-white border-t border-purple-50 flex items-center justify-between">
+                        <div class="p-3 bg-white border-t border-purple-50 flex items-center justify-between gap-2">
                             <span class="text-xs font-bold text-slate-800 truncate">Eksperimen 1: Gerakan Linear</span>
-                            <span class="text-[10px] font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">DBS10012</span>
+                            <a href="https://youtu.be/GjReQxn0Gm8" target="_blank" rel="noopener noreferrer" class="text-[10px] font-semibold text-purple-600 hover:text-purple-800 bg-purple-50 px-2 py-0.5 rounded-full shrink-0" title="Tonton di YouTube">DBS10012 ↗</a>
                         </div>
                     </div>
 
                     <div class="rounded-2xl overflow-hidden border border-purple-100 bg-slate-900 shadow-sm flex flex-col">
                         <div class="aspect-video w-full bg-slate-800">
-                            <iframe src="https://www.youtube.com/embed/FkIvZmpxHfM" class="w-full h-full border-0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/FkIvZmpxHfM" title="Eksperimen 2: Prinsip Archimedes" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="w-full h-full border-0" allowfullscreen></iframe>
                         </div>
-                        <div class="p-3 bg-white border-t border-purple-50 flex items-center justify-between">
+                        <div class="p-3 bg-white border-t border-purple-50 flex items-center justify-between gap-2">
                             <span class="text-xs font-bold text-slate-800 truncate">Eksperimen 2: Prinsip Archimedes</span>
-                            <span class="text-[10px] font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">DBS10012</span>
+                            <a href="https://youtu.be/FkIvZmpxHfM" target="_blank" rel="noopener noreferrer" class="text-[10px] font-semibold text-purple-600 hover:text-purple-800 bg-purple-50 px-2 py-0.5 rounded-full shrink-0" title="Tonton di YouTube">DBS10012 ↗</a>
                         </div>
                     </div>
 
                     <div class="rounded-2xl overflow-hidden border border-purple-100 bg-slate-900 shadow-sm flex flex-col">
                         <div class="aspect-video w-full bg-slate-800">
-                            <iframe src="https://www.youtube.com/embed/LjTkbhKA6-E" class="w-full h-full border-0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/LjTkbhKA6-E" title="Eksperimen 3: Sistem Terma" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" class="w-full h-full border-0" allowfullscreen></iframe>
                         </div>
-                        <div class="p-3 bg-white border-t border-purple-50 flex items-center justify-between">
+                        <div class="p-3 bg-white border-t border-purple-50 flex items-center justify-between gap-2">
                             <span class="text-xs font-bold text-slate-800 truncate">Eksperimen 3: Sistem Terma</span>
-                            <span class="text-[10px] font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">DBS10012</span>
+                            <a href="https://youtu.be/LjTkbhKA6-E" target="_blank" rel="noopener noreferrer" class="text-[10px] font-semibold text-purple-600 hover:text-purple-800 bg-purple-50 px-2 py-0.5 rounded-full shrink-0" title="Tonton di YouTube">DBS10012 ↗</a>
                         </div>
                     </div>
                 </div>
@@ -722,7 +620,7 @@
                         <p class="text-xs text-slate-500 mt-0.5">Laporkan alatan makmal yang rosak, pecah atau tidak berfungsi dengan segera</p>
                     </div>
                 </div>
-                <a href="https://forms.gle/kefWHfgooM4nPwTx7" target="_blank" rel="noopener noreferrer" class="py-3 px-5 bg-white hover:bg-rose-50 text-rose-700 font-bold text-xs sm:text-sm rounded-2xl border border-rose-200 shadow-xs transition flex items-center justify-center gap-2 shrink-0">
+                <a href="https://forms.gle/kefWHfgooM4nPwTx7" target="_blank" rel="noopener noreferrer" class="py-3 px-5 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white font-bold text-xs sm:text-sm rounded-2xl shadow-sm shadow-rose-500/20 transition flex items-center justify-center gap-2 shrink-0">
                     <span>Borang Aduan Kerosakan</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                 </a>
@@ -769,145 +667,21 @@
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             <span>Buka Excel Penuh (Google Sheets)</span>
                         </a>
-                        <button onclick="fetchSheetData()" class="px-4 py-2.5 rounded-2xl bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold text-xs border border-purple-200 flex items-center gap-2 transition">
+                        <button onclick="reloadAdminTimetableEmbed()" class="px-4 py-2.5 rounded-2xl bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold text-xs border border-purple-200 flex items-center gap-2 transition">
                             <i class="fa-solid fa-rotate"></i>
                             <span>Segerakkan Semula</span>
                         </button>
                     </div>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50">
+                <!-- Paparan Excel Admin (Fixed Center View Tanpa Skrol) -->
+                <!-- Paparan Excel Admin (Native Crisp 100% Width) -->
+                <div id="admin-gsheet-wrapper" class="rounded-2xl overflow-hidden border border-slate-200 bg-white w-full">
                     <iframe id="admin-gsheet-iframe" 
                             src="https://docs.google.com/spreadsheets/d/1XLx4nSJni_5nSBg-YIgdjdQvE9efhqHWhHUpn4wznf4/edit?usp=sharing&widget=true&headers=false" 
-                            class="w-full h-[550px] border-0 bg-white" 
+                            class="w-full h-[680px] border-0 bg-white block" 
                             loading="lazy">
                     </iframe>
-                </div>
-            </div>
-
-            <!-- Panel Pengurusan Galeri Foto Makmal (Admin Sahaja) -->
-            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 border border-purple-200 shadow-sm space-y-5">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
-                    <div class="flex items-center gap-3">
-                        <div class="w-11 h-11 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl shrink-0">
-                            <i class="fa-solid fa-images"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-black text-slate-800 text-base">Tukar Gambar Ruang Makmal (Halaman Utama)</h3>
-                            <p class="text-xs text-slate-400">Muat naik fail gambar baharu dari peranti atau tampal pautan URL gambar makmal MKEJ 1 & MKEJ 2.</p>
-                        </div>
-                    </div>
-                    <button onclick="resetLabImages()" class="px-4 py-2 rounded-2xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 font-bold text-xs border border-slate-200 flex items-center gap-2 transition self-start sm:self-center">
-                        <i class="fa-solid fa-rotate-left"></i>
-                        <span>Set Semula Gambar Asal</span>
-                    </button>
-                </div>
-
-                <!-- Notifikasi Status Simpanan Gambar -->
-                <div id="gallery-save-notice" class="hidden p-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span id="gallery-save-text">Gambar makmal berjaya dikemas kini pada paparan utama!</span>
-                </div>
-
-            <!-- Panel Pengurusan Galeri Foto Makmal (Admin Sahaja - Versi Ringkas & Padat) -->
-            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-5 border border-purple-200 shadow-sm space-y-3">
-                <div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-100">
-                    <div class="flex items-center gap-2.5">
-                        <div class="w-8 h-8 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-sm shrink-0">
-                            <i class="fa-solid fa-images"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-black text-slate-800 text-sm">Tukar Gambar Ruang Makmal</h3>
-                            <p class="text-[11px] text-slate-400">Muat naik fail atau tampal URL untuk kemas kini foto halaman utama.</p>
-                        </div>
-                    </div>
-                    <button onclick="resetLabImages()" class="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-rose-50 text-slate-600 hover:text-rose-600 font-bold text-[11px] border border-slate-200 flex items-center gap-1.5 transition">
-                        <i class="fa-solid fa-rotate-left"></i>
-                        <span>Set Semula</span>
-                    </button>
-                </div>
-
-                <!-- Notifikasi Status Simpanan Gambar -->
-                <div id="gallery-save-notice" class="hidden px-3 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span id="gallery-save-text">Gambar makmal berjaya dikemas kini!</span>
-                </div>
-
-                <!-- Grid Padat 4 Kad Mendatar -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                    
-                    <!-- Gambar 1: MKEJ 1 Depan -->
-                    <div class="p-3 rounded-2xl border border-slate-200 bg-slate-50/60 space-y-2">
-                        <div class="flex items-center gap-2.5">
-                            <img id="admin-preview-0" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=300&q=80" alt="Pratonton 1" class="w-12 h-10 object-cover rounded-lg border border-slate-200 bg-white shrink-0">
-                            <div class="min-w-0 flex-1">
-                                <span class="text-[9px] font-black uppercase text-purple-600">Slot 1</span>
-                                <h4 class="font-extrabold text-slate-800 text-[11px] truncate" title="MKEJ 1 • Bahagian Depan">MKEJ 1 • Depan</h4>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5 text-[11px]">
-                            <input type="file" accept="image/*" onchange="handleLabImageUpload(0, event)" class="block w-full text-[10px] text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[10px] file:font-bold file:bg-purple-100 file:text-purple-700 hover:file:bg-purple-200 cursor-pointer">
-                            <div class="flex gap-1">
-                                <input type="url" id="admin-url-0" placeholder="URL gambar..." class="min-w-0 flex-1 px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-purple-500 text-[11px]">
-                                <button onclick="applyLabImageUrl(0)" class="px-2.5 py-1 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-[10px] transition shrink-0">OK</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gambar 2: MKEJ 1 Belakang -->
-                    <div class="p-3 rounded-2xl border border-slate-200 bg-slate-50/60 space-y-2">
-                        <div class="flex items-center gap-2.5">
-                            <img id="admin-preview-1" src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=300&q=80" alt="Pratonton 2" class="w-12 h-10 object-cover rounded-lg border border-slate-200 bg-white shrink-0">
-                            <div class="min-w-0 flex-1">
-                                <span class="text-[9px] font-black uppercase text-purple-600">Slot 2</span>
-                                <h4 class="font-extrabold text-slate-800 text-[11px] truncate" title="MKEJ 1 • Bahagian Belakang">MKEJ 1 • Belakang</h4>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5 text-[11px]">
-                            <input type="file" accept="image/*" onchange="handleLabImageUpload(1, event)" class="block w-full text-[10px] text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[10px] file:font-bold file:bg-purple-100 file:text-purple-700 hover:file:bg-purple-200 cursor-pointer">
-                            <div class="flex gap-1">
-                                <input type="url" id="admin-url-1" placeholder="URL gambar..." class="min-w-0 flex-1 px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-purple-500 text-[11px]">
-                                <button onclick="applyLabImageUrl(1)" class="px-2.5 py-1 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-[10px] transition shrink-0">OK</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gambar 3: MKEJ 2 Depan -->
-                    <div class="p-3 rounded-2xl border border-slate-200 bg-slate-50/60 space-y-2">
-                        <div class="flex items-center gap-2.5">
-                            <img id="admin-preview-2" src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80" alt="Pratonton 3" class="w-12 h-10 object-cover rounded-lg border border-slate-200 bg-white shrink-0">
-                            <div class="min-w-0 flex-1">
-                                <span class="text-[9px] font-black uppercase text-indigo-600">Slot 3</span>
-                                <h4 class="font-extrabold text-slate-800 text-[11px] truncate" title="MKEJ 2 • Bahagian Depan">MKEJ 2 • Depan</h4>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5 text-[11px]">
-                            <input type="file" accept="image/*" onchange="handleLabImageUpload(2, event)" class="block w-full text-[10px] text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[10px] file:font-bold file:bg-indigo-100 file:text-indigo-700 hover:file:bg-indigo-200 cursor-pointer">
-                            <div class="flex gap-1">
-                                <input type="url" id="admin-url-2" placeholder="URL gambar..." class="min-w-0 flex-1 px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-indigo-500 text-[11px]">
-                                <button onclick="applyLabImageUrl(2)" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-[10px] transition shrink-0">OK</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gambar 4: MKEJ 2 Belakang -->
-                    <div class="p-3 rounded-2xl border border-slate-200 bg-slate-50/60 space-y-2">
-                        <div class="flex items-center gap-2.5">
-                            <img id="admin-preview-3" src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=300&q=80" alt="Pratonton 4" class="w-12 h-10 object-cover rounded-lg border border-slate-200 bg-white shrink-0">
-                            <div class="min-w-0 flex-1">
-                                <span class="text-[9px] font-black uppercase text-indigo-600">Slot 4</span>
-                                <h4 class="font-extrabold text-slate-800 text-[11px] truncate" title="MKEJ 2 • Bahagian Belakang">MKEJ 2 • Belakang</h4>
-                            </div>
-                        </div>
-                        <div class="space-y-1.5 text-[11px]">
-                            <input type="file" accept="image/*" onchange="handleLabImageUpload(3, event)" class="block w-full text-[10px] text-slate-500 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[10px] file:font-bold file:bg-indigo-100 file:text-indigo-700 hover:file:bg-indigo-200 cursor-pointer">
-                            <div class="flex gap-1">
-                                <input type="url" id="admin-url-3" placeholder="URL gambar..." class="min-w-0 flex-1 px-2 py-1 rounded-lg border border-slate-200 bg-white focus:outline-none focus:border-indigo-500 text-[11px]">
-                                <button onclick="applyLabImageUrl(3)" class="px-2.5 py-1 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-[10px] transition shrink-0">OK</button>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -1094,9 +868,9 @@
     <!-- ========================================================================= -->
     <!-- FOOTER -->
     <!-- ========================================================================= -->
-    <footer class="mt-auto bg-white/70 border-t border-purple-100/60 py-5">
+    <footer class="mt-auto bg-black/20 backdrop-blur-md border-t border-white/10 py-5">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-xs text-slate-400 font-medium tracking-wide">
+            <p class="text-xs text-purple-200/80 font-medium tracking-wide">
                 Hakcipta Terpelihara © 2026 Pengurusan Makmal Jabatan Matematik, Sains dan Komputer (JMSK), Politeknik Port Dickson.
             </p>
         </div>
@@ -1205,15 +979,13 @@
             });
         }
 
-        // Simpanan data jadual interaktif
+        // Simpanan data jadual interaktif dinamik (menyokong Minggu 1 hingga Minggu 16 mengikut GSheet)
+        const MAX_WEEKS = 16;
         let currentActiveWeek = 1;
-        const TIMETABLE_DATA = {
-            1: { mkej1: createEmptySchedule(1), mkej2: createEmptySchedule(1) },
-            2: { mkej1: createEmptySchedule(2), mkej2: createEmptySchedule(2) },
-            3: { mkej1: createEmptySchedule(3), mkej2: createEmptySchedule(3) },
-            4: { mkej1: createEmptySchedule(4), mkej2: createEmptySchedule(4) },
-            5: { mkej1: createEmptySchedule(5), mkej2: createEmptySchedule(5) }
-        };
+        const TIMETABLE_DATA = {};
+        for (let w = 1; w <= MAX_WEEKS; w++) {
+            TIMETABLE_DATA[w] = { mkej1: createEmptySchedule(w), mkej2: createEmptySchedule(w) };
+        }
 
         // Pautan Google Sheets ID Rasmi
         const SHEET_ID = '1XLx4nSJni_5nSBg-YIgdjdQvE9efhqHWhHUpn4wznf4';
@@ -1245,64 +1017,6 @@
             return str;
         }
 
-        // Kaedah JSONP: Membaca pelbagai kemungkinan tab (Default, Sheet1, MKEJ 1, MKEJ 2)
-        function fetchSheetData() {
-            const statusText = document.getElementById('sync-status-text');
-            const syncDot = document.getElementById('sync-dot');
-            if (statusText) statusText.innerText = "Menyegerak data...";
-            if (syncDot) syncDot.className = "w-2 h-2 rounded-full bg-amber-500 animate-pulse";
-
-            // Muat turun lembaran lalai utama (gid=0 / Sheet1) serta tab MKEJ 1 & MKEJ 2
-            loadSheetViaJsonp(null, 'handleGenericSheetResponse');
-            loadSheetViaJsonp('Sheet1', 'handleGenericSheetResponse');
-            loadSheetViaJsonp('MKEJ 1', 'handleMkej1Response');
-            loadSheetViaJsonp('MKEJ 2', 'handleMkej2Response');
-        }
-
-        function loadSheetViaJsonp(sheetName, callbackName) {
-            const oldScript = document.getElementById('gviz-script-' + callbackName + (sheetName ? '-' + sheetName : ''));
-            if (oldScript) oldScript.remove();
-
-            const script = document.createElement('script');
-            script.id = 'gviz-script-' + callbackName + (sheetName ? '-' + sheetName : '');
-            let url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=responseHandler:${callbackName}&t=${Date.now()}`;
-            if (sheetName) {
-                url += `&sheet=${encodeURIComponent(sheetName)}`;
-            }
-            script.src = url;
-            script.onerror = function() {
-                // Senyap jika sesuatu helaian tiada
-            };
-            document.body.appendChild(script);
-        }
-
-        // Pengendali Respons Helaian MKEJ 1
-        window.handleMkej1Response = function(response) {
-            if (response && response.table && response.table.rows && response.table.rows.length > 0) {
-                extractSessionInfo(response.table.rows);
-                parseFlexibleTable(response.table.rows, 'mkej1');
-                finalizeSync();
-            }
-        };
-
-        // Pengendali Respons Helaian MKEJ 2
-        window.handleMkej2Response = function(response) {
-            if (response && response.table && response.table.rows && response.table.rows.length > 0) {
-                extractSessionInfo(response.table.rows);
-                parseFlexibleTable(response.table.rows, 'mkej2');
-                finalizeSync();
-            }
-        };
-
-        // Pengendali Respons Helaian Utama (Sheet1 atau Gabungan)
-        window.handleGenericSheetResponse = function(response) {
-            if (response && response.table && response.table.rows && response.table.rows.length > 0) {
-                extractSessionInfo(response.table.rows);
-                parseCombinedOrSingleSheet(response.table.rows);
-                finalizeSync();
-            }
-        };
-
         // Mengesan maklumat Sesi & Tarikh daripada baris-baris atas Google Sheets
         function extractSessionInfo(rows) {
             for (let i = 0; i < Math.min(rows.length, 12); i++) {
@@ -1323,6 +1037,134 @@
                     }
                     break;
                 }
+            }
+        }
+
+        // Kaedah JSONP: Membaca tab helaian Google Sheets mengikut minggu & makmal aktif
+        function fetchSheetData(targetWeek = currentActiveWeek) {
+            const statusText = document.getElementById('sync-status-text');
+            const syncDot = document.getElementById('sync-dot');
+            if (statusText) statusText.innerText = `Menyegerak Minggu ${targetWeek}...`;
+            if (syncDot) syncDot.className = "w-2 h-2 rounded-full bg-amber-500 animate-pulse";
+
+            const weekTabCandidates = [
+                null,
+                'Sheet1',
+                `Minggu ${targetWeek}`,
+                `MINGGU ${targetWeek}`,
+                `M${targetWeek}`,
+                `Week ${targetWeek}`,
+                'MKEJ 1',
+                'MKEJ 2'
+            ];
+
+            weekTabCandidates.forEach(tabName => {
+                if (tabName === 'MKEJ 1') {
+                    loadSheetViaJsonp(tabName, 'handleMkej1Response', targetWeek);
+                } else if (tabName === 'MKEJ 2') {
+                    loadSheetViaJsonp(tabName, 'handleMkej2Response', targetWeek);
+                } else {
+                    loadSheetViaJsonp(tabName, 'handleGenericSheetResponse', targetWeek);
+                }
+            });
+        }
+
+        function loadSheetViaJsonp(sheetName, callbackName, weekNum = currentActiveWeek) {
+            const safeKey = (sheetName || 'default').replace(/[^a-zA-Z0-9]/g, '_');
+            const scriptId = `gviz-script-${callbackName}-${safeKey}-w${weekNum}`;
+            const oldScript = document.getElementById(scriptId);
+            if (oldScript) oldScript.remove();
+
+            const wrapperFnName = `${callbackName}_w${weekNum}_${safeKey}`;
+            window[wrapperFnName] = function(response) {
+                if (callbackName === 'handleMkej1Response') {
+                    handleMkej1Response(response, weekNum);
+                } else if (callbackName === 'handleMkej2Response') {
+                    handleMkej2Response(response, weekNum);
+                } else {
+                    handleGenericSheetResponse(response, weekNum, sheetName);
+                }
+            };
+
+            const script = document.createElement('script');
+            script.id = scriptId;
+            let url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=responseHandler:${wrapperFnName}&t=${Date.now()}`;
+            if (sheetName) {
+                url += `&sheet=${encodeURIComponent(sheetName)}`;
+            }
+            script.src = url;
+            script.onerror = function() {
+                // Senyap jika nama tab helaian tersebut tiada dalam Google Sheets
+            };
+            document.body.appendChild(script);
+        }
+
+        // Pengendali Respons Helaian MKEJ 1
+        window.handleMkej1Response = function(response, weekNum = currentActiveWeek) {
+            if (response && response.table && response.table.rows && response.table.rows.length > 0) {
+                extractSessionInfo(response.table.rows);
+                parseFlexibleTable(response.table.rows, 'mkej1', weekNum);
+                finalizeSync();
+            }
+        };
+
+        // Pengendali Respons Helaian MKEJ 2
+        window.handleMkej2Response = function(response, weekNum = currentActiveWeek) {
+            if (response && response.table && response.table.rows && response.table.rows.length > 0) {
+                extractSessionInfo(response.table.rows);
+                parseFlexibleTable(response.table.rows, 'mkej2', weekNum);
+                finalizeSync();
+            }
+        };
+
+        // Pengendali Respons Helaian Umum / Mingguan
+        window.handleGenericSheetResponse = function(response, weekNum = currentActiveWeek, sheetName = null) {
+            if (response && response.table && response.table.rows && response.table.rows.length > 0) {
+                extractSessionInfo(response.table.rows);
+                parseCombinedOrSingleSheet(response.table.rows, weekNum, sheetName);
+                finalizeSync();
+            }
+        };
+
+        // Memastikan slot minggu sentiasa wujud jika GSheet mempunyai minggu lebih tinggi
+        function ensureWeekBucket(weekNum) {
+            if (!TIMETABLE_DATA[weekNum]) {
+                TIMETABLE_DATA[weekNum] = {
+                    mkej1: createEmptySchedule(weekNum),
+                    mkej2: createEmptySchedule(weekNum)
+                };
+            }
+            return TIMETABLE_DATA[weekNum];
+        }
+
+        // Jana butang pil minggu atas & bar tab Google Sheets di bawah secara dinamik
+        function initWeekTabsUI(totalWeeks = MAX_WEEKS) {
+            const topContainer = document.getElementById('week-selector-container');
+            const bottomContainer = document.getElementById('gsheet-bottom-tabs-container');
+
+            if (topContainer) {
+                let topHtml = '';
+                for (let w = 1; w <= totalWeeks; w++) {
+                    const isActive = w === currentActiveWeek;
+                    const cls = isActive
+                        ? 'week-pill px-3.5 py-2 rounded-2xl text-xs font-extrabold bg-purple-600 text-white shadow-xs shrink-0 transition'
+                        : 'week-pill px-3.5 py-2 rounded-2xl text-xs font-extrabold bg-slate-100 text-slate-600 hover:bg-purple-50 shrink-0 transition';
+                    topHtml += `<button id="week-btn-${w}" onclick="selectWeek(${w})" class="${cls}">Minggu ${w}</button>`;
+                }
+                topContainer.innerHTML = topHtml;
+            }
+
+            if (bottomContainer) {
+                let bottomHtml = `<span class="px-2.5 py-1 text-slate-400 text-xs shrink-0" title="Tab Helaian Google Sheets"><i class="fa-solid fa-bars"></i></span>`;
+                for (let w = 1; w <= totalWeeks; w++) {
+                    const isActive = w === currentActiveWeek;
+                    if (isActive) {
+                        bottomHtml += `<button onclick="selectWeek(${w})" id="gsheet-tab-${w}" class="gsheet-bottom-tab px-3.5 py-1.5 rounded-t-xl rounded-b-lg bg-white text-emerald-700 font-extrabold text-[11px] shadow-xs border-b-2 border-emerald-500 flex items-center gap-1.5 transition shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span>Minggu ${w}</span></button>`;
+                    } else {
+                        bottomHtml += `<button onclick="selectWeek(${w})" id="gsheet-tab-${w}" class="gsheet-bottom-tab px-3.5 py-1.5 rounded-t-xl rounded-b-lg text-slate-600 hover:bg-white/70 font-bold text-[11px] flex items-center gap-1.5 transition shrink-0"><span>Minggu ${w}</span></button>`;
+                    }
+                }
+                bottomContainer.innerHTML = bottomHtml;
             }
         }
 
@@ -1347,14 +1189,12 @@
 
         // Peta Lajur Berdasarkan Header Masa Sebenar Excel (Auto Detect Column Mapping)
         function detectHeaderSlotMapping(rows) {
-            // Lalai jika pengepala belum dikesan: slot 1 hingga 8
             const map = { s1: -1, s2: -1, s3: -1, s4: -1, s5: -1, s6: -1, s7: -1, s8: -1 };
             
             for (let i = 0; i < Math.min(rows.length, 20); i++) {
                 const vals = extractRowValues(rows[i]);
                 vals.forEach((txt, cIdx) => {
                     const str = txt.replace(/\s+/g, '').toLowerCase();
-                    // Kenalpasti masa tepat mengikut lajur (sokong format titik atau titik bertindih, atau nombor lajur 1-8)
                     if (str.includes('8.00-9.00') || str.includes('8:00-9:00') || str === '8.00' || str === '1') map.s1 = cIdx;
                     else if (str.includes('9.00-10.00') || str.includes('9:00-10:00') || str === '9.00' || str === '2') map.s2 = cIdx;
                     else if (str.includes('10.15-11.15') || str.includes('10:15-11:15') || str === '10.15' || str === '3') map.s3 = cIdx;
@@ -1369,15 +1209,15 @@
         }
 
         // Menghurai jadual fleksibel untuk makmal tertentu
-        function parseFlexibleTable(rows, labKey) {
+        function parseFlexibleTable(rows, labKey, targetWeek = currentActiveWeek) {
             const verticalBreakLetters = ['R', 'E', 'H', 'A', 'T', 'B', 'K'];
             const headerMap = detectHeaderSlotMapping(rows);
+            const bucket = ensureWeekBucket(targetWeek);
 
             rows.forEach(r => {
                 const vals = extractRowValues(r);
                 if (vals.length === 0) return;
 
-                // Cari indeks Hari (ISNIN, SELASA, dsb.) di mana-mana dalam 4 lajur terawal
                 let dayIdx = -1;
                 let dayColIndex = -1;
 
@@ -1395,7 +1235,6 @@
                     let foundTarikh = '-';
                     let dateColIndex = -1;
 
-                    // Cari tarikh pada lajur selepas lajur Hari
                     for (let c = dayColIndex + 1; c < Math.min(vals.length, dayColIndex + 4); c++) {
                         if (vals[c] && isDateValue(vals[c])) {
                             foundTarikh = parseDateCell(vals[c]);
@@ -1404,14 +1243,13 @@
                         }
                     }
 
-                    const targetRow = TIMETABLE_DATA[currentActiveWeek][labKey][dayIdx];
+                    const targetRow = bucket[labKey][dayIdx];
                     if (!targetRow) return;
 
                     if (foundTarikh !== '-') {
                         targetRow.tarikh = foundTarikh;
                     }
 
-                    // Isi slot menggunakan pemetaan lajur masa sebenar jika dikesan
                     let usedHeaderMapping = false;
                     for (let s = 1; s <= 8; s++) {
                         const targetCol = headerMap['s' + s];
@@ -1427,7 +1265,6 @@
                         }
                     }
 
-                    // Jika header masa tidak jelas, gunakan kedudukan lajur mutlak selepas tarikh & rehat
                     if (!usedHeaderMapping) {
                         const startCol = (dateColIndex !== -1 ? dateColIndex : dayColIndex) + 1;
                         let currentSlot = 1;
@@ -1436,7 +1273,6 @@
                             const cellVal = vals[c];
                             const upper = (cellVal || '').toUpperCase();
 
-                            // Jika sel adalah perkataan atau huruf rehat, lompat tanpa menolak nombor slot
                             if (upper === 'REHAT' || upper === 'BREAK' || verticalBreakLetters.includes(upper)) {
                                 continue;
                             }
@@ -1449,11 +1285,15 @@
             });
         }
 
-        // Menghurai jika admin letakkan jadual dalam lembaran gabungan (MKEJ 1 diikuti MKEJ 2)
-        function parseCombinedOrSingleSheet(rows) {
+        // Menghurai jika admin letakkan jadual dalam lembaran gabungan atau mengikut tab Minggu
+        function parseCombinedOrSingleSheet(rows, targetWeek = currentActiveWeek, sheetName = null) {
             let activeLab = 'mkej1';
+            let activeWeekCursor = targetWeek;
             const verticalBreakLetters = ['R', 'E', 'H', 'A', 'T', 'B', 'K'];
             const headerMap = detectHeaderSlotMapping(rows);
+
+            // Jika nama tab Google Sheets secara spesifik merujuk kepada Minggu tertentu, kunci kepada minggu tersebut
+            const isExplicitWeekTab = sheetName && /MINGGU|WEEK|^M\d+$/i.test(sheetName);
 
             rows.forEach(r => {
                 const vals = extractRowValues(r);
@@ -1461,7 +1301,18 @@
 
                 const fullRowText = vals.join(' ').toUpperCase();
 
-                // Tukar makmal sasaran jika terjumpa tajuk MKEJ 2 atau MKEJ 1
+                // Kesan penanda Minggu (1 hingga 16) dalam lembaran jika bukan tab minggu khusus
+                if (!isExplicitWeekTab) {
+                    const weekMatch = fullRowText.match(/MINGGU\s*(\d{1,2})/);
+                    if (weekMatch) {
+                        const detectedWeek = parseInt(weekMatch[1], 10);
+                        if (detectedWeek >= 1 && detectedWeek <= 20) {
+                            activeWeekCursor = detectedWeek;
+                            ensureWeekBucket(detectedWeek);
+                        }
+                    }
+                }
+
                 if (fullRowText.includes('MKEJ 2') || fullRowText.includes('MAKMAL 2') || fullRowText.includes('KEJURUTERAAN 2')) {
                     activeLab = 'mkej2';
                     return;
@@ -1470,7 +1321,6 @@
                     return;
                 }
 
-                // Cari padanan Hari (ISNIN - JUMAAT)
                 let dayIdx = -1;
                 let dayColIndex = -1;
                 for (let c = 0; c < Math.min(vals.length, 4); c++) {
@@ -1495,7 +1345,8 @@
                         }
                     }
 
-                    const targetRow = TIMETABLE_DATA[currentActiveWeek][activeLab][dayIdx];
+                    const weekBucket = ensureWeekBucket(activeWeekCursor);
+                    const targetRow = weekBucket ? weekBucket[activeLab][dayIdx] : null;
                     if (!targetRow) return;
 
                     if (foundTarikh !== '-') {
@@ -1537,12 +1388,34 @@
             });
         }
 
-        // Data Gambar Makmal
+        // Muat semula iframe Google Sheets jadual supaya sentiasa memaparkan perubahan terkini
+        function reloadUserTimetableEmbed() {
+            const iframe = document.getElementById('user-gsheet-timetable-iframe');
+            const statusText = document.getElementById('sync-status-text');
+            if (statusText) statusText.innerText = 'Menyegerak...';
+            if (iframe) {
+                iframe.src = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/preview?rm=minimal&t=${Date.now()}`;
+            }
+            setTimeout(() => {
+                const timeNow = new Date().toLocaleTimeString('ms-MY', { hour: '2-digit', minute: '2-digit' });
+                if (statusText) statusText.innerText = `Terkini (${timeNow})`;
+            }, 800);
+        }
+
+        // Muat semula iframe Google Sheets Admin
+        function reloadAdminTimetableEmbed() {
+            const iframe = document.getElementById('admin-gsheet-iframe');
+            if (iframe) {
+                iframe.src = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit?usp=sharing&widget=true&headers=false&t=${Date.now()}`;
+            }
+        }
+
+        // Data Gambar Makmal (Pautan Rasmi Google Drive)
         const DEFAULT_LAB_IMAGES = [
-            { title: "MKEJ 1 • Bahagian Depan (Papan Putih & Meja Pensyarah)", url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" },
-            { title: "MKEJ 1 • Bahagian Belakang (SAFETY FIRST & Papan Kenyataan)", url: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=80" },
-            { title: "MKEJ 2 • Bahagian Depan (Papan Putih & Meja Pensyarah)", url: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80" },
-            { title: "MKEJ 2 • Bahagian Belakang (Sudut Meja Amali)", url: "https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=1200&q=80" }
+            { title: "MKEJ 1 • Bahagian Depan (Papan Putih & Meja Pensyarah)", url: "https://lh3.googleusercontent.com/d/1juywMPcBanqtfwnJCFNh9kFHDNJHzMFJ=w1200" },
+            { title: "MKEJ 1 • Bahagian Belakang (SAFETY FIRST & Papan Kenyataan)", url: "https://lh3.googleusercontent.com/d/1GneFPRaBJYQ4TXJfaQtesoJDY_WplPSd=w1200" },
+            { title: "MKEJ 2 • Bahagian Depan (Papan Putih & Meja Pensyarah)", url: "https://lh3.googleusercontent.com/d/1ZWXuas2YswHscDalnr7oE0pGFZKOxL_8=w1200" },
+            { title: "MKEJ 2 • Bahagian Belakang (Sudut Meja Amali)", url: "https://lh3.googleusercontent.com/d/1bfhmMZLqH8O6TyAUiaAW6qnp_Ss24IuN=w1200" }
         ];
 
         let LAB_IMAGES = JSON.parse(JSON.stringify(DEFAULT_LAB_IMAGES));
@@ -1584,7 +1457,7 @@
             }
         }
 
-        // Muat naik fail gambar terus dari komputer / telefon (mampatan automatik agar ringan disimpan)
+        // Muat naik fail gambar terus dari komputer / telefon
         function handleLabImageUpload(index, event) {
             const file = event.target.files[0];
             if (!file) return;
@@ -1626,7 +1499,6 @@
             let url = input.value.trim();
             if (!url) return;
 
-            // Tukar pautan Google Drive biasa kepada pautan paparan gambar langsung jika perlu
             const driveMatch = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
             if (url.includes('drive.google.com') && driveMatch) {
                 url = `https://lh3.googleusercontent.com/d/${driveMatch[1]}=w1000`;
@@ -1674,24 +1546,39 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Tukar Minggu Jadual
-        function selectWeek(weekNum) {
-            currentActiveWeek = weekNum;
-            document.querySelectorAll('.week-pill').forEach(btn => {
-                btn.classList.remove('bg-purple-600', 'text-white');
-                btn.classList.add('bg-slate-100', 'text-slate-600');
-            });
+        // Tukar Paparan Makmal (MKEJ 1 atau MKEJ 2)
+        function selectLabView(labKey) {
+            const card1 = document.getElementById('card-timetable-mkej1');
+            const card2 = document.getElementById('card-timetable-mkej2');
+            const btn1 = document.getElementById('view-lab-btn-mkej1');
+            const btn2 = document.getElementById('view-lab-btn-mkej2');
 
-            const activeBtn = document.getElementById('week-btn-' + weekNum);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-slate-100', 'text-slate-600');
-                activeBtn.classList.add('bg-purple-600', 'text-white');
+            if (labKey === 'mkej1') {
+                if (card1) card1.classList.remove('hidden');
+                if (card2) card2.classList.add('hidden');
+                if (btn1) {
+                    btn1.className = "px-4 py-1.5 rounded-xl text-xs font-extrabold bg-purple-600 text-white shadow-xs transition flex items-center gap-1.5";
+                    btn1.innerHTML = `<span class="w-2 h-2 rounded-full bg-white"></span><span>MKEJ 1</span>`;
+                }
+                if (btn2) {
+                    btn2.className = "px-4 py-1.5 rounded-xl text-xs font-extrabold text-slate-600 hover:text-indigo-700 transition flex items-center gap-1.5";
+                    btn2.innerHTML = `<span class="w-2 h-2 rounded-full bg-indigo-500"></span><span>MKEJ 2</span>`;
+                }
+            } else {
+                if (card1) card1.classList.add('hidden');
+                if (card2) card2.classList.remove('hidden');
+                if (btn1) {
+                    btn1.className = "px-4 py-1.5 rounded-xl text-xs font-extrabold text-slate-600 hover:text-purple-700 transition flex items-center gap-1.5";
+                    btn1.innerHTML = `<span class="w-2 h-2 rounded-full bg-purple-500"></span><span>MKEJ 1</span>`;
+                }
+                if (btn2) {
+                    btn2.className = "px-4 py-1.5 rounded-xl text-xs font-extrabold bg-indigo-600 text-white shadow-xs transition flex items-center gap-1.5";
+                    btn2.innerHTML = `<span class="w-2 h-2 rounded-full bg-white"></span><span>MKEJ 2</span>`;
+                }
             }
-
-            renderTimetable(weekNum);
         }
 
-        // Format paparan sel: jika diisi dengan kelas/pensyarah, warnakan dengan elegan
+        // Format paparan sel
         function formatCell(content) {
             if (!content || content === '-') {
                 return `<span class="text-slate-300 font-bold">-</span>`;
@@ -1708,7 +1595,6 @@
             const data1 = currentWeek.mkej1 || [];
             const data2 = currentWeek.mkej2 || [];
 
-            // 1. Render Jadual MKEJ 1
             if (tbody1) {
                 tbody1.innerHTML = '';
                 data1.forEach(row => {
@@ -1732,7 +1618,6 @@
                 });
             }
 
-            // 2. Render Jadual MKEJ 2
             if (tbody2) {
                 tbody2.innerHTML = '';
                 data2.forEach(row => {
@@ -1840,7 +1725,6 @@
             const cols = (response.table.cols || []).map(c => (c.label || '').toUpperCase());
             const rows = response.table.rows;
 
-            // Kenalpasti indeks lajur secara pintar berdasarkan tajuk borang Google Form
             const findCol = (keywords, fallbackIdx) => {
                 const idx = cols.findIndex(lbl => keywords.some(k => lbl.includes(k)));
                 return idx !== -1 ? idx : fallbackIdx;
@@ -1854,7 +1738,6 @@
             const colSlot = findCol(['SLOT', 'WAKTU', 'JAM'], 5);
             const colStatus = findCol(['STATUS', 'KELULUSAN', 'TINDAKAN', 'CATATAN', 'ULASAN'], -1);
 
-            // Titik mula masa pengosongan senarai (hanya permohonan baharu selepas ini akan dipaparkan)
             const CLEARED_TIMESTAMP = new Date('2026-11-12T13:22:00+08:00').getTime();
 
             const newBookings = [];
@@ -1867,11 +1750,9 @@
                     return (v !== null && v !== undefined) ? String(v).trim() : '';
                 });
 
-                // Abaikan baris kosong atau baris tajuk berulang
                 if (vals.filter(Boolean).length < 2) return;
                 if ((vals[colName] || '').toUpperCase().includes('NAMA PENSYARAH')) return;
 
-                // Abaikan rekod lama sebelum senarai dikosongkan
                 const rawTimeCell = r.c[colTime];
                 if (rawTimeCell && rawTimeCell.v) {
                     const vStr = String(rawTimeCell.v);
@@ -1889,24 +1770,20 @@
                     }
                 }
 
-                // Semak sama ada baris ini sudah diproses oleh Admin atau belum
                 let isAlreadyProcessed = false;
 
                 if (colStatus !== -1 && vals[colStatus] !== '') {
-                    // Jika lajur Status wujud dan telah diisi (kecuali perkataan 'baru' atau 'belum')
                     const st = vals[colStatus].toUpperCase();
                     if (!st.includes('BARU') && !st.includes('BELUM') && !st.includes('PENDING')) {
                         isAlreadyProcessed = true;
                     }
                 } else if (colStatus === -1) {
-                    // Jika tiada tajuk lajur Status yang jelas, semak sama ada mana-mana sel di hujung baris mempunyai status tindakan
                     const rowJoined = vals.slice(colSlot + 1).join(' ').toUpperCase();
                     if (rowJoined !== '' && !rowJoined.includes('BARU') && !rowJoined.includes('BELUM')) {
                         isAlreadyProcessed = true;
                     }
                 }
 
-                // Tapis keluar permohonan yang sudah diproses
                 if (isAlreadyProcessed) {
                     return;
                 }
@@ -1920,7 +1797,6 @@
                 });
             });
 
-            // Susun permohonan paling terkini di bahagian atas
             newBookings.reverse();
 
             if (badge) {
@@ -2042,7 +1918,6 @@
 
                 if (vals.filter(Boolean).length < 2) return;
 
-                // Abaikan rekod lama sebelum masa penetapan terkini
                 const rawTimeCell = r.c[0];
                 if (rawTimeCell && rawTimeCell.v) {
                     const dtMatch = String(rawTimeCell.v).match(/Date\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+),\s*(\d+),\s*(\d+))?\)/);
@@ -2055,7 +1930,6 @@
                     }
                 }
 
-                // Tapis keluar rekod yang sudah diambil tindakan / ada status selesai
                 if (statusColIdx !== -1 && vals[statusColIdx] !== '') {
                     const st = vals[statusColIdx].toUpperCase();
                     if (!st.includes('BARU') && !st.includes('BELUM') && !st.includes('PENDING')) return;
@@ -2073,7 +1947,6 @@
                 });
             });
 
-            // Susun maklumat paling terkini di atas
             pendingRows.reverse();
 
             if (badge) {
@@ -2109,14 +1982,11 @@
         // Mulakan jadual pada muat turun pertama
         window.onload = function() {
             loadSavedLabImages();
-            renderTimetable(1);
-            fetchSheetData();
             fetchNewBookings();
             loadSavedCategoryLinks();
 
             // Auto-refresh setiap 60 saat supaya sebarang pengemaskinian oleh admin ditarik secara automatik
             setInterval(() => {
-                fetchSheetData();
                 fetchNewBookings();
                 CATEGORY_KEYS.forEach(key => fetchCategorySheet(key));
             }, 60000);
