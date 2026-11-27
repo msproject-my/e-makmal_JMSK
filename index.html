@@ -117,6 +117,24 @@
             background-position: center;
             background-attachment: fixed;
         }
+
+        /* Sekatan Pemilihan Teks & Seretan Imej */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        input, textarea, select {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+        }
+        img {
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
     </style>
 </head>
 <body class="custom-purple-bg text-slate-700 min-h-screen flex flex-col antialiased selection:bg-purple-200 selection:text-purple-900">
@@ -2292,6 +2310,72 @@
                 CATEGORY_KEYS.forEach(key => fetchCategorySheet(key));
             }, 60000);
         };
+
+        // =========================================================================
+        // LAPISAN KESELAMATAN: PERLINDUNGAN KOD SUMBER & ANTI-INSPECT
+        // =========================================================================
+        (function initSourceProtection() {
+            // 1. Halang Klik Kanan (Context Menu)
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+                return false;
+            });
+
+            // 2. Halang Salin (Copy), Potong (Cut) & Seret (Drag)
+            ['copy', 'cut', 'dragstart'].forEach(function (evt) {
+                document.addEventListener(evt, function (e) {
+                    const tag = (e.target && e.target.tagName) ? e.target.tagName.toUpperCase() : '';
+                    if (tag !== 'INPUT' && tag !== 'TEXTAREA') {
+                        e.preventDefault();
+                        return false;
+                    }
+                });
+            });
+
+            // 3. Halang Pintasan Papan Kekunci (F12, Ctrl+U, Ctrl+S, Ctrl+Shift+I/J/C, Cmd+Option+I/J/C/U)
+            document.addEventListener('keydown', function (e) {
+                const key = (e.key || '').toUpperCase();
+                const isCtrlOrCmd = e.ctrlKey || e.metaKey;
+
+                // F12
+                if (e.key === 'F12' || e.keyCode === 123) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+Shift+I / J / C atau Cmd+Option+I / J / C
+                if (isCtrlOrCmd && (e.shiftKey || e.altKey) && ['I', 'J', 'C', 'K'].includes(key)) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                // Ctrl+U (View Source), Ctrl+S (Save Page), Ctrl+P (Print)
+                if (isCtrlOrCmd && ['U', 'S', 'P'].includes(key)) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // 4. Bersihkan Console & Kaburkan Paparan Jika DevTools Dikesan Terbuka
+            let devtoolsOpen = false;
+            const threshold = 165;
+            setInterval(function () {
+                const widthDiff = window.outerWidth - window.innerWidth > threshold;
+                const heightDiff = window.outerHeight - window.innerHeight > threshold;
+                if (widthDiff || heightDiff) {
+                    if (!devtoolsOpen) {
+                        devtoolsOpen = true;
+                        document.body.style.filter = 'blur(12px)';
+                        document.body.style.pointerEvents = 'none';
+                        if (typeof console.clear === 'function') console.clear();
+                    }
+                } else if (devtoolsOpen) {
+                    devtoolsOpen = false;
+                    document.body.style.filter = '';
+                    document.body.style.pointerEvents = '';
+                }
+            }, 800);
+        })();
     </script>
 </body>
 </html>
